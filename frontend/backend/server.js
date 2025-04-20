@@ -28,13 +28,27 @@ function extractValidJsonArray(text) {
 // Endpoint: Get quiz questions
 app.get("/api/quiz", async (req, res) => {
   try {
+    // Ensure that generateQuiz() is returning valid JSON array
     const questions = await generateQuiz();
+    if (!Array.isArray(questions)) {
+      throw new Error("Quiz generation failed: Invalid data returned.");
+    }
     res.json(questions);
   } catch (err) {
     console.error("❌ Error generating quiz:", err.message);
+    // Return fallback questions if quiz generation fails
     res.status(500).json({
       error:
-        "Sorry, something went wrong while loading the quiz. Please try again.",
+        "Sorry, something went wrong while loading the quiz. Using mock data instead.",
+      questions: [
+        { question: "What is 2 + 2?", options: ["3", "4", "5"], answer: "4" },
+        {
+          question: "What is the capital of France?",
+          options: ["Paris", "Rome", "Berlin"],
+          answer: "Paris",
+        },
+        // Add more mock questions here...
+      ],
     });
   }
 });
