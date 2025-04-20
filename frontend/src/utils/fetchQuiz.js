@@ -5,21 +5,34 @@ export const fetchQuiz = async () => {
       const url =
         "https://bruhdive-an-online-quiz-platform.onrender.com/api/quiz";
       console.log(`Requesting URL: ${url}`);
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+          "Cache-Control": "no-cache",
+        },
+        // Add a timeout to prevent hanging
+        signal: AbortSignal.timeout(20000), // 20 second timeout
+      });
 
       if (!response.ok) {
         throw new Error(`API responded with status: ${response.status}`);
       }
 
       const data = await response.json();
+      console.log("Received API response:", data);
+
+      // Check if the API returned an object with error and questions properties
+      // or if it returned an array directly
+      const questions = Array.isArray(data) ? data : data.questions || [];
 
       // Validate that we received questions with the required structure
-      if (!Array.isArray(data) || data.length === 0) {
+      if (!Array.isArray(questions) || questions.length === 0) {
         throw new Error("API returned invalid or empty quiz data");
       }
 
       // Do basic validation on each question
-      const validData = data.filter(
+      const validData = questions.filter(
         (q) =>
           q &&
           q.question &&
@@ -204,7 +217,7 @@ export const fetchQuiz = async () => {
   }
 };
 
-// Helper function to validate a quiz question (could be extracted if used elsewhere)
+// Helper function to validate a quiz question
 export const isValidQuestion = (question) => {
   return (
     question &&
@@ -216,7 +229,7 @@ export const isValidQuestion = (question) => {
   );
 };
 
-// Optional: Add a function to get a specific number of questions
+// Get a specific number of questions
 export const getRandomQuestions = (questions, count = 5) => {
   if (!Array.isArray(questions) || questions.length === 0) {
     return [];

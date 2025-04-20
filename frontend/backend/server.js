@@ -8,7 +8,7 @@ require("dotenv").config();
 
 const app = express();
 
-// ✅ Use Render's dynamic port or fallback to 5000 locally
+// Use Render's dynamic port or fallback to 5000 locally
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
@@ -28,28 +28,54 @@ function extractValidJsonArray(text) {
 // Endpoint: Get quiz questions
 app.get("/api/quiz", async (req, res) => {
   try {
-    // Ensure that generateQuiz() is returning valid JSON array
+    console.log("Quiz endpoint hit - generating questions");
     const questions = await generateQuiz();
-    if (!Array.isArray(questions)) {
-      throw new Error("Quiz generation failed: Invalid data returned.");
+
+    if (!Array.isArray(questions) || questions.length === 0) {
+      throw new Error(
+        "Quiz generation failed: Invalid or empty data returned."
+      );
     }
-    res.json(questions);
+
+    console.log(`Returning ${questions.length} quiz questions`);
+    res.json(questions); // Return just the array of questions
   } catch (err) {
     console.error("❌ Error generating quiz:", err.message);
-    // Return fallback questions if quiz generation fails
-    res.status(500).json({
-      error:
-        "Sorry, something went wrong while loading the quiz. Using mock data instead.",
-      questions: [
-        { question: "What is 2 + 2?", options: ["3", "4", "5"], answer: "4" },
-        {
-          question: "What is the capital of France?",
-          options: ["Paris", "Rome", "Berlin"],
-          answer: "Paris",
-        },
-        // Add more mock questions here...
-      ],
-    });
+    // Return fallback questions directly as an array to match expected format
+    const fallbackQuestions = [
+      {
+        question: "What does API stand for?",
+        options: [
+          "A) Application Programming Interface",
+          "B) Automated Program Instruction",
+          "C) Application Process Integration",
+          "D) Auxiliary Programming Implementation",
+        ],
+        answer: "A",
+        explanation:
+          "API (Application Programming Interface) is a set of rules that allows one software application to interact with another.",
+        domain: "Web Development",
+        difficulty: "Easy",
+        skill_type: "Theory",
+      },
+      {
+        question: "What is the primary purpose of HTML?",
+        options: [
+          "A) To style web pages",
+          "B) To define the structure of web content",
+          "C) To program web applications",
+          "D) To communicate with databases",
+        ],
+        answer: "B",
+        explanation:
+          "HTML (HyperText Markup Language) is used to define the structure and content of web pages.",
+        domain: "Web Development",
+        difficulty: "Easy",
+        skill_type: "Theory",
+      },
+    ];
+
+    res.json(fallbackQuestions);
   }
 });
 
@@ -80,6 +106,12 @@ app.post("/api/career-recommendations", async (req, res) => {
     );
 
     const deepInfraAPIKey = process.env.DEEPINFRA_API_KEY;
+
+    // Check if API key is available
+    if (!deepInfraAPIKey) {
+      throw new Error("DeepInfra API key is not configured");
+    }
+
     const modelUrl =
       "https://api.deepinfra.com/v1/inference/meta-llama/Meta-Llama-3-8B-Instruct";
 
@@ -96,6 +128,7 @@ app.post("/api/career-recommendations", async (req, res) => {
           Authorization: `Bearer ${deepInfraAPIKey}`,
           "Content-Type": "application/json",
         },
+        timeout: 30000, // 30 second timeout
       }
     );
 
@@ -117,7 +150,7 @@ app.post("/api/career-recommendations", async (req, res) => {
     console.error("❌ Career guidance error:", err.message);
 
     // Fallback recommendation
-    return res.status(200).json([
+    return res.json([
       {
         title: "Tech Explorer",
         description:

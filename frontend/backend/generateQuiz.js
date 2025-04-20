@@ -1,6 +1,5 @@
 require("dotenv").config();
 const axios = require("axios");
-const fs = require("fs");
 const fallbackQuestions = require("./fallbackQuestions");
 const { quizPrompt } = require("./promptTemplates");
 
@@ -16,6 +15,13 @@ function extractValidJsonArray(text) {
 
 async function generateQuiz() {
   try {
+    console.log("Starting quiz generation with DeepInfra API");
+
+    // Check if API key is available
+    if (!deepInfraAPIKey) {
+      throw new Error("DeepInfra API key is not configured");
+    }
+
     const response = await axios.post(
       modelUrl,
       {
@@ -29,15 +35,22 @@ async function generateQuiz() {
           Authorization: `Bearer ${deepInfraAPIKey}`,
           "Content-Type": "application/json",
         },
+        timeout: 30000, // 30 second timeout to prevent hanging
       }
     );
 
     const resultText = response?.data?.results?.[0]?.generated_text || "";
-    fs.writeFileSync("raw_api_response.txt", resultText);
+    console.log(
+      `Received response from DeepInfra. Length: ${resultText.length}`
+    );
+
+    // Log a preview of the response instead of writing to file
+    console.log("Response preview:", resultText.substring(0, 200) + "...");
 
     const jsonText = extractValidJsonArray(resultText);
 
-    if (!jsonText) throw new Error("No valid JSON array found");
+    if (!jsonText)
+      throw new Error("No valid JSON array found in the model response");
 
     const parsed = JSON.parse(jsonText);
 
@@ -68,15 +81,15 @@ async function generateQuiz() {
       skill_type: q.skill_type || "Knowledge",
     }));
 
-    fs.writeFileSync(
-      "cleaned_json.txt",
-      JSON.stringify(completeQuestions, null, 2)
+    console.log(
+      `✅ Successfully generated ${completeQuestions.length} valid questions`
     );
 
-    console.log(`✅ Extracted ${completeQuestions.length} valid questions`);
+    // Return the questions directly
     return completeQuestions;
   } catch (error) {
-    console.error("❌ Quiz generation failed:", error.message);
+    console.error(`❌ Quiz generation failed: ${error.message}`);
+    console.log("Falling back to predefined questions");
     return fallbackQuestions;
   }
 }
