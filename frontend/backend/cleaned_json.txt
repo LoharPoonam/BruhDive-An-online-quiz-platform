@@ -1,422 +1,450 @@
 [
   {
-    "question": "What does HTML stand for?",
+    "question": "What is the primary function of a load balancer in a cloud computing environment?",
     "options": [
-      "A) Hyper Text Markup Language",
-      "B) Hyperlinks and Text Markup Language",
-      "C) Home Tool Markup Language",
-      "D) Hypertext Machine Language"
+      "A) To distribute traffic across multiple servers",
+      "B) To provide redundancy for critical systems",
+      "C) To monitor network performance",
+      "D) To manage data storage"
     ],
     "answer": "A",
-    "explanation": "HTML is the standard markup language for Web pages. It defines the structure of web content using a series of elements that label content parts.",
-    "domain": "Web Development",
+    "explanation": "A load balancer is a device or software that distributes incoming network traffic across multiple servers to ensure no single point of failure and improve scalability.",
+    "domain": "DevOps / Cloud",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a load balancer in a cloud infrastructure?",
+    "question": "What is the purpose of the 'finally' block in a try-catch statement in Java?",
     "options": [
-      "A) To distribute traffic evenly across multiple servers",
-      "B) To prioritize traffic to specific servers",
-      "C) To monitor server performance",
-      "D) To encrypt data transfer"
+      "A) To handle exceptions",
+      "B) To execute code regardless of exception",
+      "C) To declare variables",
+      "D) To implement loops"
     ],
-    "answer": "A",
-    "explanation": "A load balancer distributes incoming traffic across multiple servers to improve responsiveness, reliability, and scalability.",
-    "domain": "DevOps / Cloud",
+    "answer": "B",
+    "explanation": "The 'finally' block in a try-catch statement in Java is used to execute code regardless of whether an exception is thrown or not.",
+    "domain": "Backend / Java / Node",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary function of a firewall in cybersecurity?",
+    "question": "What is the primary purpose of the 'pip install' command in Python?",
     "options": [
-      "A) To monitor network traffic for suspicious activity",
-      "B) To block unauthorized access to a network",
-      "C) To encrypt data transfer",
-      "D) To authenticate user identities"
-    ],
-    "answer": "B",
-    "explanation": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
-    "domain": "Cybersecurity",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the difference between a monolithic architecture and a microservices architecture?",
-    "options": [
-      "A) Monolithic is faster, microservices is more scalable",
-      "B) Monolithic is more scalable, microservices is faster",
-      "C) Monolithic is more complex, microservices is simpler",
-      "D) Monolithic is simpler, microservices is more complex"
+      "A) To uninstall packages",
+      "B) To update packages",
+      "C) To install packages",
+      "D) To remove packages"
     ],
     "answer": "C",
-    "explanation": "Monolithic architecture is a single, self-contained unit, while microservices architecture is a collection of small, independent services.",
+    "explanation": "The 'pip install' command is used to install packages and their dependencies in Python.",
     "domain": "Software Engineering",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the term for the process of identifying and mitigating potential security threats in a software application?",
+    "options": [
+      "A) Penetration testing",
+      "B) Vulnerability assessment",
+      "C) Threat modeling",
+      "D) Risk analysis"
+    ],
+    "answer": "C",
+    "explanation": "Threat modeling is the process of identifying and mitigating potential security threats in a software application.",
+    "domain": "Cybersecurity",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a schema in a database?",
+    "question": "What is the purpose of the 'SELECT' statement in SQL?",
     "options": [
-      "A) To store data",
-      "B) To define the structure of data",
-      "C) To query data",
-      "D) To back up data"
+      "A) To insert data into a table",
+      "B) To update data in a table",
+      "C) To retrieve data from a table",
+      "D) To delete data from a table"
     ],
-    "answer": "B",
-    "explanation": "A schema is a blueprint or design that defines the structure of a database, including the relationships between tables and data types.",
+    "answer": "C",
+    "explanation": "The 'SELECT' statement in SQL is used to retrieve data from a database table.",
     "domain": "Database Systems",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary function of a Docker container?",
+    "question": "What is the term for the process of creating a new function or method from an existing one?",
     "options": [
-      "A) To virtualize a server",
-      "B) To package an application and its dependencies",
-      "C) To deploy an application to a cloud platform",
-      "D) To monitor network traffic"
+      "A) Inheritance",
+      "B) Polymorphism",
+      "C) Encapsulation",
+      "D) Abstraction"
     ],
-    "answer": "B",
-    "explanation": "A Docker container is a lightweight and portable way to package an application and its dependencies, allowing for consistent and repeatable deployments.",
+    "answer": "A",
+    "explanation": "Inheritance is the process of creating a new function or method from an existing one.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the primary purpose of the 'npm install' command in Node.js?",
+    "options": [
+      "A) To uninstall packages",
+      "B) To update packages",
+      "C) To install packages",
+      "D) To remove packages"
+    ],
+    "answer": "C",
+    "explanation": "The 'npm install' command is used to install packages and their dependencies in Node.js.",
+    "domain": "Backend / Java / Node",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the term for the process of analyzing and interpreting data to extract insights and meaning?",
+    "options": [
+      "A) Data visualization",
+      "B) Data mining",
+      "C) Data analysis",
+      "D) Data science"
+    ],
+    "answer": "D",
+    "explanation": "Data science is the process of analyzing and interpreting data to extract insights and meaning.",
+    "domain": "Data Science",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the primary purpose of the 'git commit' command in Git?",
+    "options": [
+      "A) To push changes to a remote repository",
+      "B) To pull changes from a remote repository",
+      "C) To commit changes locally",
+      "D) To reset changes locally"
+    ],
+    "answer": "C",
+    "explanation": "The 'git commit' command is used to commit changes locally in Git.",
     "domain": "DevOps / Cloud",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a salt in password hashing?",
+    "question": "What is the term for the process of securing data at rest and in transit?",
     "options": [
-      "A) To make passwords more secure",
-      "B) To make passwords less secure",
-      "C) To slow down password hashing",
-      "D) To add randomness to the hashing process"
+      "A) Data encryption",
+      "B) Data compression",
+      "C) Data integrity",
+      "D) Data availability"
     ],
-    "answer": "D",
-    "explanation": "A salt is a random value added to a password before hashing, making it more difficult for attackers to use precomputed tables (rainbow tables) to crack the password.",
+    "answer": "A",
+    "explanation": "Data encryption is the process of securing data at rest and in transit.",
     "domain": "Cybersecurity",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a Kubernetes pod?",
+    "question": "What is the primary purpose of the 'SELECT DISTINCT' statement in SQL?",
     "options": [
-      "A) To manage a group of containers",
-      "B) To deploy a single container",
-      "C) To monitor container performance",
-      "D) To scale container instances"
-    ],
-    "answer": "B",
-    "explanation": "A Kubernetes pod is a single instance of a running container, which can be used to deploy a single application or service.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary function of a Linux package manager?",
-    "options": [
-      "A) To install and manage system libraries",
-      "B) To configure system settings",
-      "C) To monitor system performance",
-      "D) To back up system files"
+      "A) To retrieve unique values from a table",
+      "B) To retrieve duplicate values from a table",
+      "C) To retrieve all values from a table",
+      "D) To retrieve data from a specific table"
     ],
     "answer": "A",
-    "explanation": "A Linux package manager is a tool that installs, updates, and manages software packages on a Linux system.",
-    "domain": "Web Development",
+    "explanation": "The 'SELECT DISTINCT' statement in SQL is used to retrieve unique values from a table.",
+    "domain": "Database Systems",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a Redis cache?",
+    "question": "What is the term for the process of creating a new application from an existing one?",
     "options": [
-      "A) To store large amounts of data",
-      "B) To store frequently accessed data",
-      "C) To store temporary data",
-      "D) To store sensitive data"
-    ],
-    "answer": "B",
-    "explanation": "A Redis cache is a high-performance, in-memory data store that stores frequently accessed data to improve application performance.",
-    "domain": "Web Development",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary function of a CI/CD pipeline?",
-    "options": [
-      "A) To automate testing and deployment",
-      "B) To automate code review and deployment",
-      "C) To automate code review and testing",
-      "D) To automate deployment and testing"
+      "A) Refactoring",
+      "B) Inheritance",
+      "C) Abstraction",
+      "D) Encapsulation"
     ],
     "answer": "A",
-    "explanation": "A CI/CD pipeline automates the build, test, and deployment process, allowing for faster and more reliable software releases.",
-    "domain": "DevOps / Cloud",
+    "explanation": "Refactoring is the process of creating a new application from an existing one.",
+    "domain": "Software Engineering",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a JWT token?",
+    "question": "What is the primary purpose of the 'docker run' command in Docker?",
     "options": [
-      "A) To authenticate user identities",
-      "B) To authorize user access",
-      "C) To store user data",
-      "D) To encrypt user data"
+      "A) To create a new Docker container",
+      "B) To start a running Docker container",
+      "C) To stop a running Docker container",
+      "D) To delete a Docker container"
     ],
-    "answer": "A",
-    "explanation": "A JWT token is a JSON-based token that contains user identity information and is used for authentication and authorization purposes.",
+    "answer": "B",
+    "explanation": "The 'docker run' command is used to start a running Docker container.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the term for the process of identifying and addressing potential security vulnerabilities in software?",
+    "options": [
+      "A) Penetration testing",
+      "B) Vulnerability assessment",
+      "C) Threat modeling",
+      "D) Risk analysis"
+    ],
+    "answer": "B",
+    "explanation": "Vulnerability assessment is the process of identifying and addressing potential security vulnerabilities in software.",
     "domain": "Cybersecurity",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary function of a GraphQL schema?",
+    "question": "What is the primary purpose of the 'npm start' command in Node.js?",
     "options": [
-      "A) To define the structure of data",
-      "B) To query data",
-      "C) To mutate data",
-      "D) To resolve data"
+      "A) To install packages",
+      "B) To update packages",
+      "C) To start a Node.js application",
+      "D) To stop a Node.js application"
     ],
-    "answer": "A",
-    "explanation": "A GraphQL schema defines the structure of data and the available queries and mutations, allowing for flexible and efficient data retrieval.",
-    "domain": "Web Development",
+    "answer": "C",
+    "explanation": "The 'npm start' command is used to start a Node.js application.",
+    "domain": "Backend / Java / Node",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the term for the process of creating a new function or method that extends the behavior of an existing one?",
+    "options": [
+      "A) Inheritance",
+      "B) Polymorphism",
+      "C) Encapsulation",
+      "D) Abstraction"
+    ],
+    "answer": "B",
+    "explanation": "Polymorphism is the process of creating a new function or method that extends the behavior of an existing one.",
+    "domain": "Software Engineering",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a Docker Compose file?",
+    "question": "What is the primary purpose of the 'git push' command in Git?",
     "options": [
-      "A) To define a container network",
-      "B) To define a container volume",
-      "C) To define a container configuration",
-      "D) To define a container service"
-    ],
-    "answer": "D",
-    "explanation": "A Docker Compose file defines a service configuration, including the containers, networks, and volumes required for a service to run.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary function of a Kubernetes deployment?",
-    "options": [
-      "A) To manage a group of containers",
-      "B) To deploy a single container",
-      "C) To scale container instances",
-      "D) To manage a container network"
-    ],
-    "answer": "A",
-    "explanation": "A Kubernetes deployment manages a group of containers, ensuring that a specified number of replicas are running and available.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the purpose of a HashiCorp Terraform configuration file?",
-    "options": [
-      "A) To define infrastructure as code",
-      "B) To define application configuration",
-      "C) To define network configuration",
-      "D) To define security configuration"
-    ],
-    "answer": "A",
-    "explanation": "A HashiCorp Terraform configuration file defines infrastructure as code, allowing for version-controlled and reproducible infrastructure deployments.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary function of a Linux daemon?",
-    "options": [
-      "A) To run a single command",
-      "B) To run a background process",
-      "C) To run a foreground process",
-      "D) To run a system service"
-    ],
-    "answer": "D",
-    "explanation": "A Linux daemon is a background process that runs a system service, such as a web server or database, and can be managed using system tools.",
-    "domain": "Web Development",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the purpose of a Kubernetes Persistent Volume?",
-    "options": [
-      "A) To store temporary data",
-      "B) To store frequently accessed data",
-      "C) To store large amounts of data",
-      "D) To store sensitive data"
-    ],
-    "answer": "C",
-    "explanation": "A Kubernetes Persistent Volume provides a way to store large amounts of data persistently, allowing containers to access and share data across restarts.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary function of a Linux system logger?",
-    "options": [
-      "A) To log system events",
-      "B) To monitor system performance",
-      "C) To manage system users",
-      "D) To configure system settings"
-    ],
-    "answer": "A",
-    "explanation": "A Linux system logger records system events, such as boot messages, errors, and warnings, to a log file for troubleshooting and auditing purposes.",
-    "domain": "Web Development",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the purpose of a Kubernetes StatefulSet?",
-    "options": [
-      "A) To manage a group of containers",
-      "B) To deploy a single container",
-      "C) To scale container instances",
-      "D) To manage a container network"
-    ],
-    "answer": "A",
-    "explanation": "A Kubernetes StatefulSet manages a group of containers that require persistent storage, such as databases or file systems.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary function of a Linux package manager's dependency resolver?",
-    "options": [
-      "A) To install and manage system libraries",
-      "B) To configure system settings",
-      "C) To monitor system performance",
-      "D) To resolve package dependencies"
-    ],
-    "answer": "D",
-    "explanation": "A Linux package manager's dependency resolver resolves package dependencies, ensuring that all required packages are installed and configured correctly.",
-    "domain": "Web Development",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the purpose of a Redis cluster?",
-    "options": [
-      "A) To store large amounts of data",
-      "B) To store frequently accessed data",
-      "C) To store temporary data",
-      "D) To store sensitive data"
+      "A) To pull changes from a remote repository",
+      "B) To push changes to a remote repository",
+      "C) To commit changes locally",
+      "D) To reset changes locally"
     ],
     "answer": "B",
-    "explanation": "A Redis cluster is a distributed, in-memory data store that stores frequently accessed data to improve application performance and scalability.",
-    "domain": "Web Development",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary function of a Kubernetes Service?",
-    "options": [
-      "A) To manage a group of containers",
-      "B) To deploy a single container",
-      "C) To scale container instances",
-      "D) To provide a network interface"
-    ],
-    "answer": "D",
-    "explanation": "A Kubernetes Service provides a network interface for accessing a group of containers, allowing for load balancing, DNS, and other network services.",
+    "explanation": "The 'git push' command is used to push changes to a remote repository in Git.",
     "domain": "DevOps / Cloud",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a Docker image?",
+    "question": "What is the term for the process of analyzing and optimizing the performance of a software application?",
     "options": [
-      "A) To package an application and its dependencies",
-      "B) To deploy an application to a cloud platform",
-      "C) To monitor network traffic",
-      "D) To encrypt data transfer"
+      "A) Profiling",
+      "B) Debugging",
+      "C) Testing",
+      "D) Optimization"
     ],
     "answer": "A",
-    "explanation": "A Docker image is a lightweight and portable package that contains an application and its dependencies, allowing for consistent and repeatable deployments.",
-    "domain": "DevOps / Cloud",
+    "explanation": "Profiling is the process of analyzing and optimizing the performance of a software application.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the primary purpose of the 'SELECT COUNT(*)' statement in SQL?",
+    "options": [
+      "A) To retrieve unique values from a table",
+      "B) To retrieve duplicate values from a table",
+      "C) To retrieve the number of rows in a table",
+      "D) To retrieve data from a specific table"
+    ],
+    "answer": "C",
+    "explanation": "The 'SELECT COUNT(*)' statement in SQL is used to retrieve the number of rows in a table.",
+    "domain": "Database Systems",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary function of a Linux system service?",
+    "question": "What is the term for the process of creating a new software application from scratch?",
     "options": [
-      "A) To run a single command",
-      "B) To run a background process",
-      "C) To run a foreground process",
-      "D) To manage system services"
+      "A) Refactoring",
+      "B) Inheritance",
+      "C) Abstraction",
+      "D) Greenfield development"
     ],
     "answer": "D",
-    "explanation": "A Linux system service is a background process that manages system services, such as network services or database services, and can be controlled using system tools.",
-    "domain": "Web Development",
-    "difficulty": "Easy",
+    "explanation": "Greenfield development is the process of creating a new software application from scratch.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a Kubernetes Persistent Volume Claim?",
+    "question": "What is the primary purpose of the 'docker-compose up' command in Docker Compose?",
     "options": [
-      "A) To store temporary data",
-      "B) To store frequently accessed data",
-      "C) To store large amounts of data",
-      "D) To store sensitive data"
+      "A) To create a new Docker container",
+      "B) To start a running Docker container",
+      "C) To stop a running Docker container",
+      "D) To delete a Docker container"
     ],
-    "answer": "C",
-    "explanation": "A Kubernetes Persistent Volume Claim requests a Persistent Volume (PV) from a storage class, allowing containers to access and share data persistently.",
+    "answer": "B",
+    "explanation": "The 'docker-compose up' command is used to start a running Docker container.",
     "domain": "DevOps / Cloud",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary function of a Linux system user?",
+    "question": "What is the term for the process of identifying and mitigating potential security threats in a software application?",
     "options": [
-      "A) To manage system files",
-      "B) To manage system processes",
-      "C) To manage system users",
-      "D) To manage system groups"
+      "A) Penetration testing",
+      "B) Vulnerability assessment",
+      "C) Threat modeling",
+      "D) Risk analysis"
     ],
     "answer": "C",
-    "explanation": "A Linux system user is a user account that manages system resources, such as files, processes, and network connections, and can be used to authenticate and authorize system access.",
-    "domain": "Web Development",
-    "difficulty": "Easy",
+    "explanation": "Threat modeling is the process of identifying and mitigating potential security threats in a software application.",
+    "domain": "Cybersecurity",
+    "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a Kubernetes ReplicaSet?",
+    "question": "What is the primary purpose of the 'npm uninstall' command in Node.js?",
     "options": [
-      "A) To manage a group of containers",
-      "B) To deploy a single container",
-      "C) To scale container instances",
-      "D) To manage a container network"
+      "A) To install packages",
+      "B) To update packages",
+      "C) To uninstall packages",
+      "D) To remove packages"
     ],
-    "answer": "A",
-    "explanation": "A Kubernetes ReplicaSet manages a group of containers, ensuring that a specified number of replicas are running and available, and can be used to deploy and manage stateless applications.",
-    "domain": "DevOps / Cloud",
+    "answer": "C",
+    "explanation": "The 'npm uninstall' command is used to uninstall packages in Node.js.",
+    "domain": "Backend / Java / Node",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary function of a Linux system group?",
+    "question": "What is the term for the process of analyzing and interpreting data to extract insights and meaning?",
     "options": [
-      "A) To manage system files",
-      "B) To manage system processes",
-      "C) To manage system users",
-      "D) To manage system groups"
+      "A) Data visualization",
+      "B) Data mining",
+      "C) Data analysis",
+      "D) Data science"
     ],
     "answer": "D",
-    "explanation": "A Linux system group is a group of users that share similar privileges and access to system resources, and can be used to manage access to system files, processes, and network connections.",
-    "domain": "Web Development",
+    "explanation": "Data science is the process of analyzing and interpreting data to extract insights and meaning.",
+    "domain": "Data Science",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the primary purpose of the 'git reset' command in Git?",
+    "options": [
+      "A) To commit changes locally",
+      "B) To push changes to a remote repository",
+      "C) To reset changes locally",
+      "D) To delete a Git repository"
+    ],
+    "answer": "C",
+    "explanation": "The 'git reset' command is used to reset changes locally in Git.",
+    "domain": "DevOps / Cloud",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the purpose of a Kubernetes Deployment Config?",
+    "question": "What is the term for the process of creating a new function or method that extends the behavior of an existing one?",
     "options": [
-      "A) To define a container network",
-      "B) To define a container volume",
-      "C) To define a container configuration",
-      "D) To define a container service"
+      "A) Inheritance",
+      "B) Polymorphism",
+      "C) Encapsulation",
+      "D) Abstraction"
+    ],
+    "answer": "B",
+    "explanation": "Polymorphism is the process of creating a new function or method that extends the behavior of an existing one.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the primary purpose of the 'npm ls' command in Node.js?",
+    "options": [
+      "A) To install packages",
+      "B) To update packages",
+      "C) To list packages",
+      "D) To remove packages"
     ],
     "answer": "C",
-    "explanation": "A Kubernetes Deployment Config defines a container configuration, including the container image, ports, and environment variables, and can be used to deploy and manage stateless applications.",
+    "explanation": "The 'npm ls' command is used to list packages in Node.js.",
+    "domain": "Backend / Java / Node",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the term for the process of identifying and addressing potential security vulnerabilities in software?",
+    "options": [
+      "A) Penetration testing",
+      "B) Vulnerability assessment",
+      "C) Threat modeling",
+      "D) Risk analysis"
+    ],
+    "answer": "B",
+    "explanation": "Vulnerability assessment is the process of identifying and addressing potential security vulnerabilities in software.",
+    "domain": "Cybersecurity",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the primary purpose of the 'docker stop' command in Docker?",
+    "options": [
+      "A) To create a new Docker container",
+      "B) To start a running Docker container",
+      "C) To stop a running Docker container",
+      "D) To delete a Docker container"
+    ],
+    "answer": "C",
+    "explanation": "The 'docker stop' command is used to stop a running Docker container.",
     "domain": "DevOps / Cloud",
     "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the term for the process of creating a new software application from scratch?",
+    "options": [
+      "A) Refactoring",
+      "B) Inheritance",
+      "C) Abstraction",
+      "D) Greenfield development"
+    ],
+    "answer": "D",
+    "explanation": "Greenfield development is the process of creating a new software application from scratch.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the primary purpose of the 'npm version' command in Node.js?",
+    "options": [
+      "A) To install packages",
+      "B) To update packages",
+      "C) To list packages",
+      "D) To manage package versions"
+    ],
+    "answer": "D",
+    "explanation": "The 'npm version' command is used to manage package versions in Node.js.",
+    "domain": "Backend / Java / Node",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the term for the process of analyzing and interpreting data to extract insights and meaning?",
+    "options": [
+      "A) Data visualization",
+      "B) Data mining",
+      "C) Data analysis",
+      "D) Data science"
+    ],
+    "answer": "D",
+    "explanation": "Data science is the process of analyzing and interpreting data to extract insights and meaning.",
+    "domain": "Data Science",
+    "difficulty": "Medium",
     "skill_type": "Theory"
   }
 ]
