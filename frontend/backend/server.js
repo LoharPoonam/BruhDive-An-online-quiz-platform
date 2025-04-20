@@ -7,10 +7,17 @@ const { careerRecommendationPrompt } = require("./promptTemplates");
 require("dotenv").config();
 
 const app = express();
-const PORT = 5000;
+
+// ✅ Use Render's dynamic port or fallback to 5000 locally
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+
+// Root route for Render health check
+app.get("/", (req, res) => {
+  res.send("✅ BruhDive API is live and ready!");
+});
 
 // Utility to clean and extract valid JSON array from AI response
 function extractValidJsonArray(text) {
@@ -113,6 +120,6 @@ app.post("/api/career-recommendations", async (req, res) => {
 });
 
 // Start the server
-app.get("/", (req, res) => {
-  res.send("✅ BruhDive API is live and ready!");
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
