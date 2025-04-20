@@ -2,9 +2,10 @@ export const fetchQuiz = async () => {
   try {
     // Try to fetch from the API first
     try {
-      const response = await fetch(
-        "https://bruhdive-an-online-quiz-platform.onrender.com/"
-      );
+      const url =
+        "https://bruhdive-an-online-quiz-platform.onrender.com/api/quiz";
+      console.log(`Requesting URL: ${url}`);
+      const response = await fetch(url);
 
       if (!response.ok) {
         throw new Error(`API responded with status: ${response.status}`);
