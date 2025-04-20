@@ -1,0 +1,109 @@
+/* PyCountdown.css */
+:root {
+  /* Light Theme Variables */
+  --bg-primary: #f4f4f4;
+  --text-primary: #333;
+  --accent-color: #ffcc00;
+
+  /* Dark Theme Variables */
+  --bg-dark: #121212;
+  --text-dark: #fff;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(110vh - 120px);
+  height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 10vw, 5rem);
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+  margin-top: 80px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Dark Mode Support */
+.countdown-container.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.countdown-number {
+  animation: popScale 0.8s ease-in-out;
+}
+
+/* GO! text animation */
+.go-text {
+  color: var(--accent-color);
+  animation: shake 0.6s ease-in-out infinite, fadeOut 0.8s ease-in-out forwards;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .countdown-container {
+    margin-top: 60px;
+    min-height: calc(100vh - 80px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .countdown-container {
+    margin-top: 40px;
+  }
+}
+
+/* Animations */
+@keyframes popScale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}

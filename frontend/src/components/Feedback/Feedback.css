@@ -1,0 +1,64 @@
+/* Feedback Section */
+.feedback {
+  padding: 4rem 2rem;
+  background: #f4f4f4;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feedback h2 {
+  font-size: 2rem;
+  color: #6a11cb;
+  margin-bottom: 2rem;
+}
+
+.feedback-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.feedback-container {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scrollLeft 40s linear infinite; /* Slowed down */
+}
+
+/* Individual feedback box */
+.feedback-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 350px;
+  flex-shrink: 0;
+}
+
+.feedback-box p {
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.feedback-author {
+  font-weight: bold;
+  color: #6a11cb;
+}
+
+/* Keyframes for smooth infinite scrolling */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Moves only half since content is duplicated */
+  }
+}

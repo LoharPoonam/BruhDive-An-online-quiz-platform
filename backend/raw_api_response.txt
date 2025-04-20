@@ -1,0 +1,230 @@
+```
+[
+  {
+    "question": "What is the primary purpose of a firewall?",
+    "options": ["A) To filter incoming and outgoing network traffic", "B) To store and manage network configurations", "C) To monitor network performance", "D) To troubleshoot network issues"],
+    "answer": "A",
+    "explanation": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
+    "domain": "Cybersecurity",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of the `async` keyword in JavaScript?",
+    "options": ["A) To define a function that runs in the background", "B) To define a function that runs synchronously", "C) To define a function that returns a value", "D) To define a function that takes a parameter"],
+    "answer": "A",
+    "explanation": "The `async` keyword in JavaScript is used to define a function that runs asynchronously, allowing other tasks to be executed while the function is still running.",
+    "domain": "Frontend / UI/UX",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the difference between a hash and a checksum?",
+    "options": ["A) A hash is a reversible process, while a checksum is irreversible", "B) A hash is an irreversible process, while a checksum is reversible", "C) A hash is a type of encryption, while a checksum is a type of compression", "D) A hash is a type of compression, while a checksum is a type of encryption"],
+    "answer": "B",
+    "explanation": "A hash is an irreversible process that maps input data to a fixed-size output, while a checksum is a reversible process that verifies the integrity of data.",
+    "domain": "Cybersecurity",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of the `map` function in JavaScript?",
+    "options": ["A) To filter an array", "B) To iterate over an array", "C) To transform an array", "D) To sort an array"],
+    "answer": "C",
+    "explanation": "The `map` function in JavaScript is used to transform an array by applying a provided function to each element in the array.",
+    "domain": "Web Development",
+    "difficulty": "Easy",
+    "skill_type": "Coding"
+  },
+  {
+    "question": "What is the purpose of a load balancer?",
+    "options": ["A) To distribute network traffic across multiple servers", "B) To prioritize network traffic to a single server", "C) To monitor network traffic for security issues", "D) To cache network traffic for faster access"],
+    "answer": "A",
+    "explanation": "A load balancer is a device or software that distributes network traffic across multiple servers to improve responsiveness, reliability, and scalability.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of the `try`-`catch` block in JavaScript?",
+    "options": ["A) To handle errors and exceptions", "B) To handle successful code execution", "C) To handle user input validation", "D) To handle data storage"],
+    "answer": "A",
+    "explanation": "The `try`-`catch` block in JavaScript is used to handle errors and exceptions by providing a way to catch and handle errors that occur during code execution.",
+    "domain": "Frontend / UI/UX",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a data model?",
+    "options": ["A) To define the structure of data", "B) To define the relationships between data", "C) To define the security of data", "D) To define the storage of data"],
+    "answer": "A",
+    "explanation": "A data model is a conceptual representation of the structure of data, including the relationships between data, and is used to define the structure of data in a database or data storage system.",
+    "domain": "Data Structures & Algorithms",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a software design pattern?",
+    "options": ["A) To provide a reusable solution to a common problem", "B) To provide a specific implementation of a solution", "C) To provide a way to test software", "D) To provide a way to deploy software"],
+    "answer": "A",
+    "explanation": "A software design pattern is a reusable solution to a common problem that occurs in software design, providing a proven and tested approach to solving a specific design problem.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a CI/CD pipeline?",
+    "options": ["A) To automate the testing of software", "B) To automate the deployment of software", "C) To automate the development of software", "D) To automate the maintenance of software"],
+    "answer": "B",
+    "explanation": "A CI/CD pipeline is a series of automated processes that automate the deployment of software from development to production, providing a continuous and efficient way to deliver software to end-users.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a containerization platform?",
+    "options": ["A) To provide a way to package and deploy software", "B) To provide a way to manage and orchestrate software", "C) To provide a way to secure and monitor software", "D) To provide a way to analyze and debug software"],
+    "answer": "A",
+    "explanation": "A containerization platform provides a way to package and deploy software by isolating and managing the execution of applications in a lightweight and portable manner.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a data pipeline?",
+    "options": ["A) To extract data from a source", "B) To transform data into a usable format", "C) To load data into a target system", "D) To monitor data for anomalies"],
+    "answer": "B",
+    "explanation": "A data pipeline is a series of processes that transform and move data from a source to a target system, providing a way to extract, transform, and load data for analysis and use.",
+    "domain": "Data Structures & Algorithms",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a load testing tool?",
+    "options": ["A) To test the performance of software", "B) To test the security of software", "C) To test the usability of software", "D) To test the compatibility of software"],
+    "answer": "A",
+    "explanation": "A load testing tool is used to test the performance of software by simulating a large number of users or requests, providing a way to measure and improve the scalability and responsiveness of software.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a machine learning model?",
+    "options": ["A) To predict a specific outcome", "B) To classify data into categories", "C) To generate new data", "D) To analyze data for insights"],
+    "answer": "A",
+    "explanation": "A machine learning model is a mathematical framework that uses data to make predictions, classify data, or generate new data, providing a way to analyze and make decisions based on data.",
+    "domain": "Machine Learning / AI",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a microservice?",
+    "options": ["A) To provide a single point of failure", "B) To provide a scalable and maintainable architecture", "C) To provide a way to integrate multiple services", "D) To provide a way to reduce latency"],
+    "answer": "B",
+    "explanation": "A microservice is a small, independent service that provides a specific functionality, allowing for a scalable and maintainable architecture that can be easily developed, tested, and deployed.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a regression test?",
+    "options": ["A) To test new features", "B) To test the functionality of software", "C) To test the performance of software", "D) To verify that software behaves as expected"],
+    "answer": "D",
+    "explanation": "A regression test is a type of test that verifies that software behaves as expected by comparing its behavior to a previous version or baseline, ensuring that changes to software do not introduce new bugs or regressions.",
+    "domain": "Software Engineering",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a scalable architecture?",
+    "options": ["A) To provide a way to reduce costs", "B) To provide a way to increase performance", "C) To provide a way to improve maintainability", "D) To provide a way to improve scalability"],
+    "answer": "D",
+    "explanation": "A scalable architecture is designed to handle increased load and traffic by providing a way to add or remove resources as needed, ensuring that software can adapt to changing demands and requirements.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a security token?",
+    "options": ["A) To authenticate a user", "B) To authorize access to a resource", "C) To encrypt data", "D) To decrypt data"],
+    "answer": "B",
+    "explanation": "A security token is a digital credential that verifies the identity of a user or device, allowing access to a resource or system, and is used to implement authentication and authorization mechanisms.",
+    "domain": "Cybersecurity",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a software release process?",
+    "options": ["A) To automate the deployment of software", "B) To automate the testing of software", "C) To automate the development of software", "D) To automate the maintenance of software"],
+    "answer": "A",
+    "explanation": "A software release process is a set of steps that automates the deployment of software from development to production, providing a way to manage and control the release of software to end-users.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a software version control system?",
+    "options": ["A) To track changes to software", "B) To manage different versions of software", "C) To collaborate on software development", "D) To test software for bugs"],
+    "answer": "B",
+    "explanation": "A software version control system is a tool that manages different versions of software, allowing developers to track changes, collaborate on development, and manage different versions of software.",
+    "domain": "Software Engineering",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a stateless architecture?",
+    "options": ["A) To provide a way to manage sessions", "B) To provide a way to manage state", "C) To provide a way to improve scalability", "D) To provide a way to improve maintainability"],
+    "answer": "C",
+    "explanation": "A stateless architecture is designed to handle requests without maintaining state, allowing for improved scalability and performance by avoiding the need to manage complex state information.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a static code analysis tool?",
+    "options": ["A) To test the functionality of software", "B) To test the performance of software", "C) To test the security of software", "D) To analyze the code structure of software"],
+    "answer": "D",
+    "explanation": "A static code analysis tool is used to analyze the code structure of software, identifying potential issues and providing recommendations for improvement, without executing the code.",
+    "domain": "Software Engineering",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a web service?",
+    "options": ["A) To provide a way to communicate between systems", "B) To provide a way to integrate multiple services", "C) To provide a way to test software", "D) To provide a way to analyze data"],
+    "answer": "A",
+    "explanation": "A web service is a software system that provides a way to communicate between systems, allowing different systems to exchange data and functionality over a network, such as the internet.",
+    "domain": "Web Development",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a web socket?",
+    "options": ["A) To provide a way to establish a persistent connection", "B) To provide a way to send and receive data", "C) To provide a way to secure data transmission", "D) To provide a way to manage user sessions"],
+    "answer": "A",
+    "explanation": "A web socket is a protocol that establishes a persistent connection between a client and a server, allowing for bi-directional communication and real-time data transfer.",
+    "domain": "Web Development",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a workflow engine?",
+    "options": ["A) To automate business processes", "B) To manage software development", "C) To provide a way to integrate multiple services", "D) To provide a way to analyze data"],
+    "answer": "A",
+    "explanation": "A workflow engine is a software system that automates business processes by defining and executing workflows, providing a way to manage and orchestrate complex business processes.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a zero-trust model?",
+    "options": ["A) To provide a way to secure data", "B) To provide a way to authenticate users", "C) To provide a way to authorize access", "D) To assume all users are compromised"],
+    "answer": "D",
+    "explanation": "A zero-trust model assumes that all users and devices are compromised and verifies the identity and permissions of every request, providing a way to secure data and prevent unauthorized access.",
+    "domain": "Cybersecurity",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  }
+]
+```
+Please note that the difficulty level of the questions may vary depending on the individual's background and experience. It's always a good idea to review the questions and adjust the difficulty level based on the target audience. Additionally, you may want to consider adding more questions to the quiz to provide a more comprehensive assessment of the individual's knowledge and skills.

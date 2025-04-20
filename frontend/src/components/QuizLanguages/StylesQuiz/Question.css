@@ -1,0 +1,295 @@
+:root {
+  /* Color Palette */
+  --color-primary: #0066cc;
+  --color-secondary: #6c757d;
+  --color-background: #f8f9fa;
+  --color-text-dark: #2c3e50;
+  --color-text-light: #ffffff;
+  --color-border: #e1e4e8;
+  --color-hover: #f0f3f6;
+
+  /* Shadows and Transitions */
+  --shadow-default: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+  --transition-smooth: all 0.3s ease;
+}
+
+/* Main Wrapper */
+.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(120vh - 80px);
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+  overflow-y: auto;
+}
+
+/* Question Card */
+.question-container {
+  background: var(--color-text-light);
+  border-radius: 16px;
+  box-shadow: var(--shadow-default);
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  transition: var(--transition-smooth);
+}
+
+/* Question Text */
+.question-text {
+  color: var(--color-text-dark);
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.question-number {
+  display: none;
+}
+
+/* Options List */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Each Option */
+.option {
+  background: var(--color-background);
+  border: 1.5px solid var(--color-border);
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.option:hover {
+  border-color: var(--color-primary);
+  background: var(--color-hover);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+}
+
+.option input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: var(--color-text-light);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.option input[type="radio"]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  animation: radioCheck 0.3s ease;
+}
+
+.option input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  width: 10px;
+  height: 10px;
+  background: var(--color-text-light);
+  border-radius: 50%;
+}
+
+.option label {
+  color: var(--color-text-dark);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 120px;
+  height: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Types */
+.backbtn-button,
+.next-button {
+  background: var(--color-primary);
+  color: black;
+  box-shadow: 0 8px 15px rgba(0, 102, 204, 0.2);
+}
+
+.backbtn-button:hover,
+.next-button:hover {
+  background: #020465cc;
+  color: wheat;
+}
+
+.submitOne-button {
+  background: #860497;
+  color: var(--color-text-light);
+  box-shadow: 0 10px 20px rgba(220, 125, 255, 0.2);
+  width: 200px;
+  transition: var(--transition-smooth);
+}
+
+.submitOne-button:hover {
+  background: #218838;
+  font-size: large;
+}
+
+/* Quit Button */
+.quit-button {
+  background: rgb(252, 142, 142);
+  color: black;
+  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.15);
+}
+
+.quit-button:hover {
+  background: #ff0019;
+}
+
+/* Modal Styling */
+.quit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.quit-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-button {
+  padding: 8px 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal-button.confirm {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modal-button.cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .quiz-wrapper {
+    padding: 20px 10px;
+  }
+
+  .question-container {
+    padding: 25px 20px;
+  }
+
+  .question-number {
+    display: block;
+    font-size: unset;
+    color: #6c757d;
+  }
+
+  .question-text {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .option {
+    padding: 12px 10px;
+  }
+
+  .option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .nav-button {
+    width: 100%;
+    min-width: unset;
+    height: 45px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* Radio Animation */
+@keyframes radioCheck {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
