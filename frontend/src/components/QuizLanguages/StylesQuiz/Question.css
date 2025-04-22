@@ -151,14 +151,14 @@
 /* Button Types */
 .backbtn-button,
 .next-button {
-  background: var(--color-primary);
-  color: black;
-  box-shadow: 0 8px 15px rgba(0, 102, 204, 0.2);
+  background: rgb(144, 42, 138);
+  color: white;
+  box-shadow: 0 8px 15px rgba(255, 0, 183, 0.2);
 }
 
 .backbtn-button:hover,
 .next-button:hover {
-  background: #020465cc;
+  background: #7603d4cc;
   color: wheat;
 }
 
