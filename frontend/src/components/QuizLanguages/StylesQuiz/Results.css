@@ -66,7 +66,7 @@
   z-index: 1000;
   padding: 15px;
   overflow: hidden;
-  height: calc(100vh - var(--navbar-height));
+  /* Remove the margin-top that was causing the issue */
 }
 
 .results-card {
@@ -308,16 +308,20 @@
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .results-overlay {
-    height: calc(100vh - var(--navbar-height));
-    padding: 0;
+    height: 100vh;
+    padding: var(--navbar-height) 10px 10px 10px; /* Add padding top equal to navbar height */
+    box-sizing: border-box;
   }
 
   .results-card {
     width: 95%;
     max-width: 400px;
-    max-height: 95vh;
+    max-height: calc(
+      100vh - var(--navbar-height) - 20px
+    ); /* Subtract navbar height and some padding */
     margin: 0 auto;
     border-radius: 10px;
+    overflow-y: auto; /* Ensure content is scrollable if it exceeds height */
   }
 
   .results-header {
@@ -392,14 +396,14 @@
   }
 }
 
-/* For very small phones */
 @media (max-width: 480px) {
-  .results-card {
-    max-height: 98vh;
+  .results-overlay {
+    padding: var(--navbar-height) 5px 5px 5px;
   }
 
-  .quiz-completed {
-    font-size: 1.2rem;
+  .results-card {
+    max-height: calc(100vh - var(--navbar-height) - 10px);
+    width: 98%;
   }
 
   .topic-list li {
