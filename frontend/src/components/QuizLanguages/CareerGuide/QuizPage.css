@@ -476,7 +476,31 @@
 }
 
 /* Responsive Design */
+@media (max-width: 767px) {
+  /* Mobile-specific button reordering */
+  .cg-quiz-nav-buttons {
+    flex-direction: column-reverse; /* Reverses vertical order */
+    gap: 0.8rem;
+  }
+
+  .cg-btn-next {
+    order: 1; /* Next button comes first */
+    width: 100%;
+  }
+
+  .cg-btn-previous {
+    order: 2; /* Previous comes second */
+    width: 100%;
+  }
+
+  .cg-btn-quit {
+    order: 3; /* Quit comes last */
+    width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
+  /* Tablet/Desktop styles */
   .cg-quiz-header h1 {
     font-size: 2.2rem;
   }
@@ -485,27 +509,21 @@
     font-size: 1.3rem;
   }
 
-  .cg-quiz-actions {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .cg-btn-quit {
-    width: auto;
-  }
-
+  /* Keep original horizontal layout for larger screens */
   .cg-quiz-nav-buttons {
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .cg-btn-next,
+  .cg-btn-previous,
+  .cg-btn-quit {
+    order: initial; /* Reset order */
+    width: auto;
   }
 
   .cg-recommendations-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cg-action-buttons {
-    flex-direction: row;
-    justify-content: center;
   }
 
   .cg-primary-btn,
