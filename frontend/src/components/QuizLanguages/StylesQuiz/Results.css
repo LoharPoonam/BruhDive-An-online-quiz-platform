@@ -1,17 +1,11 @@
 :root {
-  /* Original color palette */
-  --color-primary: #d3aaef; /* Original purple */
-  --color-primary-light: hsl(309, 100%, 66%); /* Original bright pink */
-  --color-primary-dark: #a2008f; /* Original dark pink */
-  --color-light: #f8f9fa; /* Light background */
-  --color-dark: hsl(0, 0%, 0%); /* Black for text */
-  --color-gray: #000101; /* Nearly black for secondary text */
-  --color-white: #ffffff; /* White */
-  --color-success: #28a745; /* Success green */
-  --color-error: #dc3545; /* Error red */
-  --border-radius: 15px; /* Consistent border radius */
-  --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow */
-  --transition: all 0.3s ease; /* Smooth transitions */
+  --color-primary: #d3aaef;
+  --color-primary-light: hsl(309, 100%, 66%);
+  --color-primary-dark: #a2008f;
+  --color-light: #f8f9fa;
+  --color-dark: hsl(0, 0%, 0%);
+  --color-gray: #000101;
+  --color-white: #ffffff;
 }
 
 @keyframes fadeIn {
@@ -70,18 +64,18 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 24px;
+  padding: 15px;
   overflow: hidden;
-  margin-top: 80px; /* Space below navbar */
+  height: calc(100vh - var(--navbar-height));
 }
 
 .results-card {
   width: 100%;
-  max-width: 650px;
-  max-height: 85vh;
+  max-width: 600px;
+  max-height: 90vh;
   background-color: var(--color-white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   overflow: auto;
   opacity: 0;
   transform: scale(0.9);
@@ -92,7 +86,7 @@
 }
 
 .results-header {
-  padding: 28px 24px;
+  padding: 20px;
   text-align: center;
   background: linear-gradient(
     135deg,
@@ -100,31 +94,29 @@
     var(--color-primary-dark)
   );
   color: var(--color-white);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .quiz-completed {
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   animation: pulse 2s infinite;
 }
 
 .confetti {
   position: absolute;
-  width: 12px;
-  height: 12px;
-  top: -12px;
+  width: 10px;
+  height: 10px;
+  top: -10px;
   animation: confettiRain linear forwards;
 }
 
 .score-display {
   display: flex;
   justify-content: space-between;
-  padding: 32px 24px;
+  padding: 25px;
   background-color: var(--color-light);
-  gap: 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  gap: 10px;
 }
 
 .score-section {
@@ -150,62 +142,59 @@
 }
 
 .score-value {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--color-primary);
   line-height: 1;
 }
 
 .score-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--color-gray);
-  margin-top: 6px;
+  margin-top: 3px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 500;
 }
 
 .results-content {
-  padding: 28px 24px;
+  padding: 15px;
 }
 
 .recommendations {
   background-color: rgba(67, 97, 238, 0.05);
-  padding: 24px;
+  padding: 15px;
   border-radius: 12px;
-  margin-bottom: 32px;
-  border: 1px solid rgba(211, 170, 239, 0.1);
+  margin-bottom: 25px;
 }
 
 .recommendation-paragraph {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: var(--color-dark);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: center;
   font-style: italic;
 }
 
 .learning-topics {
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .topic-group-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-align: center;
   position: relative;
-  font-weight: 600;
 }
 
 .topic-group-title::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-primary);
 }
@@ -216,17 +205,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin: 16px 0;
+  gap: 8px;
+  margin: 10px 0;
 }
 
 .topic-list li {
   background-color: rgba(67, 97, 238, 0.1);
-  padding: 10px 16px;
+  padding: 8px 12px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--color-primary-dark);
-  transition: var(--transition);
+  transition: background-color 0.3s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -235,21 +224,20 @@
 
 .topic-list li:hover {
   background-color: rgba(67, 97, 238, 0.2);
-  transform: translateY(-2px);
 }
 
 .action-buttons {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 10px;
   flex-wrap: wrap; /* for mobile responsiveness */
 }
 
 .action-button {
   flex: 1;
-  min-width: 140px;
-  padding: 14px 20px;
+  min-width: 120px;
+  padding: 12px;
   background: linear-gradient(
     135deg,
     var(--color-primary),
@@ -258,29 +246,29 @@
   color: var(--color-white);
   border: none;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .action-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(162, 0, 143, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .answer-review-list {
   list-style-type: none;
   padding: 0;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .answer-review-item {
-  background-color: var(--color-light);
-  padding: 16px;
-  margin-bottom: 16px;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  margin-bottom: 1rem;
   border-left: 5px solid #ccc;
   border-radius: 6px;
 }
@@ -304,104 +292,93 @@
 }
 
 .answer-label {
-  font-weight: 600;
-  color: var(--color-dark);
-  margin-bottom: 8px;
-  display: block;
+  font-weight: 500;
 }
 
 .code-editor-label {
   font-style: italic;
   color: #6c757d;
-  margin-top: 10px;
-  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 .performance-message {
-  color: var(--color-dark);
-  margin-top: 16px;
-  padding: 16px;
-  background-color: rgba(211, 170, 239, 0.05);
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 500;
+  color: #000000;
 }
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .results-overlay {
-    padding: 16px;
+    height: calc(100vh - var(--navbar-height));
+    padding: 0;
   }
 
   .results-card {
     width: 95%;
-    max-width: 500px;
-    max-height: 90vh;
+    max-width: 400px;
+    max-height: 95vh;
     margin: 0 auto;
     border-radius: 10px;
   }
 
   .results-header {
-    padding: 20px 16px;
+    padding: 10px;
   }
 
   .quiz-completed {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 3px;
   }
 
   .score-display {
     flex-direction: row;
-    padding: 24px 16px;
-    gap: 12px;
+    padding: 10px;
+    gap: 5px;
   }
 
   .score-section {
     margin: 0;
-    padding: 6px;
+    padding: 5px;
   }
 
   .score-value {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .score-label {
-    font-size: 0.75rem;
-    margin-top: 4px;
+    font-size: 0.7rem;
   }
 
   .results-content {
-    padding: 20px 16px;
+    padding: 10px;
   }
 
   .recommendations {
-    padding: 16px;
-    margin-bottom: 24px;
+    padding: 10px;
+    margin-bottom: 10px;
   }
 
   .recommendation-paragraph {
-    font-size: 0.9rem;
-    margin-bottom: 16px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
     white-space: normal;
   }
 
   .topic-group-title {
-    font-size: 1rem;
-    margin-bottom: 14px;
+    font-size: 0.9rem;
   }
 
   .topic-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
-    padding-bottom: 8px;
+    gap: 6px;
+    padding-bottom: 5px;
   }
 
   .topic-list li {
     flex: 1 0 auto;
-    padding: 8px 12px;
-    font-size: 0.8rem;
+    padding: 5px 8px;
+    font-size: 0.7rem;
     text-align: center;
     min-width: calc(50% - 10px);
     box-sizing: border-box;
@@ -409,9 +386,9 @@
   }
 
   .action-button {
-    padding: 12px 16px;
-    font-size: 0.85rem;
-    margin-top: 6px;
+    padding: 10px;
+    font-size: 0.8rem;
+    margin-top: 8px;
   }
 }
 
@@ -422,25 +399,16 @@
   }
 
   .quiz-completed {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .topic-list li {
-    min-width: calc(50% - 8px);
-    font-size: 0.75rem;
-    padding: 6px 10px;
+    min-width: calc(50% - 6px);
+    font-size: 0.65rem;
+    padding: 4px 6px;
   }
 
   .recommendation-paragraph {
-    font-size: 0.85rem;
-  }
-
-  .score-display {
-    padding: 16px 12px;
-    gap: 8px;
-  }
-
-  .score-value {
-    font-size: 1.6rem;
+    font-size: 0.75rem;
   }
 }
