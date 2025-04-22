@@ -7,86 +7,79 @@ const { careerRecommendationPrompt } = require("./promptTemplates");
 require("dotenv").config();
 
 const app = express();
-
-// Use Render's dynamic port or fallback to 5000 locally
 const PORT = process.env.PORT || 5000;
+
+// Add some basic request logging
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  next();
+});
 
 app.use(cors());
 app.use(express.json());
 
-// Root route for Render health check
-app.get("/", (req, res) => {
-  res.send("✅ BruhDive API is live and ready!");
-});
+// Simple in-memory cache
+const cache = {
+  quizQuestions: null,
+  quizTimestamp: null,
+  CACHE_TTL: 3600000, // 1 hour in milliseconds
+};
 
-// Utility to clean and extract valid JSON array from AI response
+// Utility to clean and extract valid JSON array from AI text
 function extractValidJsonArray(text) {
   const match = text.match(/\[\s*\{[\s\S]*?\}\s*\]/);
   return match ? match[0].replace(/```json|```/g, "").trim() : null;
 }
 
-// Endpoint: Get quiz questions
+// Endpoint to fetch quiz questions
 app.get("/api/quiz", async (req, res) => {
-  try {
-    console.log("Quiz endpoint hit - generating questions");
-    const questions = await generateQuiz();
+  console.log("Quiz endpoint hit - generating questions");
 
-    if (!Array.isArray(questions) || questions.length === 0) {
-      throw new Error(
-        "Quiz generation failed: Invalid or empty data returned."
-      );
+  try {
+    // Check cache first
+    const currentTime = Date.now();
+    if (
+      cache.quizQuestions &&
+      cache.quizTimestamp &&
+      currentTime - cache.quizTimestamp < cache.CACHE_TTL
+    ) {
+      console.log("✅ Returning cached quiz questions");
+      return res.json(cache.quizQuestions);
     }
 
+    // No valid cache, generate new questions
+    const questions = await generateQuiz();
+
+    // Update cache
+    cache.quizQuestions = questions;
+    cache.quizTimestamp = currentTime;
+
     console.log(`Returning ${questions.length} quiz questions`);
-    res.json(questions); // Return just the array of questions
+    res.json(questions);
   } catch (err) {
     console.error("❌ Error generating quiz:", err.message);
-    // Return fallback questions directly as an array to match expected format
-    const fallbackQuestions = [
-      {
-        question: "What does API stand for?",
-        options: [
-          "A) Application Programming Interface",
-          "B) Automated Program Instruction",
-          "C) Application Process Integration",
-          "D) Auxiliary Programming Implementation",
-        ],
-        answer: "A",
-        explanation:
-          "API (Application Programming Interface) is a set of rules that allows one software application to interact with another.",
-        domain: "Web Development",
-        difficulty: "Easy",
-        skill_type: "Theory",
-      },
-      {
-        question: "What is the primary purpose of HTML?",
-        options: [
-          "A) To style web pages",
-          "B) To define the structure of web content",
-          "C) To program web applications",
-          "D) To communicate with databases",
-        ],
-        answer: "B",
-        explanation:
-          "HTML (HyperText Markup Language) is used to define the structure and content of web pages.",
-        domain: "Web Development",
-        difficulty: "Easy",
-        skill_type: "Theory",
-      },
-    ];
-
-    res.json(fallbackQuestions);
+    res.status(500).json({
+      error:
+        "Sorry, something went wrong while loading the quiz. Please try again.",
+    });
   }
 });
 
-// Endpoint: Get career recommendations based on domain performance
+// Create a custom axios instance for recommendations with extended timeout
+const recommendationAxios = axios.create({
+  timeout: 60000, // 60 seconds
+});
+
+// Endpoint to fetch career recommendations
 app.post("/api/career-recommendations", async (req, res) => {
+  console.log("Career recommendations endpoint hit");
+
   try {
     const { domainPerformance } = req.body;
 
     if (!domainPerformance) {
       return res.status(400).json({
-        error: "Missing domain performance data.",
+        error: "Sorry, something went wrong. Please try again.",
       });
     }
 
@@ -106,16 +99,18 @@ app.post("/api/career-recommendations", async (req, res) => {
     );
 
     const deepInfraAPIKey = process.env.DEEPINFRA_API_KEY;
-
-    // Check if API key is available
     if (!deepInfraAPIKey) {
-      throw new Error("DeepInfra API key is not configured");
+      console.error("❌ Missing DeepInfra API key in environment variables");
+      throw new Error("API key missing");
     }
 
     const modelUrl =
       "https://api.deepinfra.com/v1/inference/meta-llama/Meta-Llama-3-8B-Instruct";
 
-    const response = await axios.post(
+    console.log("🔄 Sending career recommendation request to DeepInfra API...");
+    const startTime = Date.now();
+
+    const response = await recommendationAxios.post(
       modelUrl,
       {
         input: prompt,
@@ -128,8 +123,11 @@ app.post("/api/career-recommendations", async (req, res) => {
           Authorization: `Bearer ${deepInfraAPIKey}`,
           "Content-Type": "application/json",
         },
-        timeout: 200000, // 30 second timeout
       }
+    );
+
+    console.log(
+      `✅ Career API request completed in ${Date.now() - startTime}ms`
     );
 
     const resultText = response?.data?.results?.[0]?.generated_text || "";
@@ -148,9 +146,15 @@ app.post("/api/career-recommendations", async (req, res) => {
     res.json(recommendations);
   } catch (err) {
     console.error("❌ Career guidance error:", err.message);
+    // Log detail if it's a timeout
+    if (err.code === "ECONNABORTED" || err.message.includes("timeout")) {
+      console.error(
+        `Request timed out after ${err.config?.timeout || "unknown"}ms`
+      );
+    }
 
-    // Fallback recommendation
-    return res.json([
+    // Return 1 fallback career recommendation only
+    return res.status(200).json([
       {
         title: "Tech Explorer",
         description:
@@ -166,7 +170,19 @@ app.post("/api/career-recommendations", async (req, res) => {
   }
 });
 
+// Basic health check endpoint
+app.get("/health", (req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`- Environment: ${process.env.NODE_ENV || "development"}`);
+  console.log(`- Cache TTL: ${cache.CACHE_TTL / 60000} minutes`);
+});
+
+// Handle unhandled promise rejections
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
 });

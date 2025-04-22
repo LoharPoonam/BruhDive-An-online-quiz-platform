@@ -1,5 +1,5 @@
 const quizPrompt = `
-Generate 30 categorized quiz questions for a tech career guidance quiz. Create questions that span multiple domains in software development, cybersecurity, cloud computing, and data science.
+Generate 20 categorized quiz questions for a tech career guidance quiz. Create questions that span multiple domains in software development, cybersecurity, cloud computing, and data science.
 
 Each question must:
 - Be professionally worded with proper technical terminology
