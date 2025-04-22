@@ -67,7 +67,7 @@ app.get("/api/quiz", async (req, res) => {
 
 // Create a custom axios instance for recommendations with extended timeout
 const recommendationAxios = axios.create({
-  timeout: 60000, // 60 seconds
+  timeout: 120000, // 60 seconds
 });
 
 // Endpoint to fetch career recommendations

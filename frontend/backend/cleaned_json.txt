@@ -1,449 +1,267 @@
 [
   {
-    "question": "What is the primary function of a load balancer in a cloud computing environment?",
+    "question": "What does HTML stand for?",
     "options": [
-      "A) To distribute traffic across multiple servers",
-      "B) To provide redundancy for critical systems",
-      "C) To monitor network performance",
+      "A) Hyper Text Markup Language",
+      "B) Hyperlinks and Text Markup Language",
+      "C) Home Tool Markup Language",
+      "D) Hypertext Machine Language"
+    ],
+    "answer": "A",
+    "explanation": "HTML is the standard markup language for Web pages. It defines the structure of web content using a series of elements that label content parts.",
+    "domain": "Web Development",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the main purpose of a firewall in a network?",
+    "options": [
+      "A) To connect to the internet",
+      "B) To block unauthorized access",
+      "C) To speed up network traffic",
+      "D) To store network data"
+    ],
+    "answer": "B",
+    "explanation": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
+    "domain": "Cybersecurity",
+    "difficulty": "Easy",
+    "skill_type": "Security"
+  },
+  {
+    "question": "What is the difference between a monolithic architecture and a microservices architecture?",
+    "options": [
+      "A) Monolithic is more scalable",
+      "B) Microservices is more complex",
+      "C) Monolithic is more modular",
+      "D) Microservices is more monolithic"
+    ],
+    "answer": "B",
+    "explanation": "Monolithic architecture is a single, self-contained unit, whereas microservices architecture is a collection of small, independent services that communicate with each other.",
+    "domain": "Software Engineering",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a load balancer in a cloud environment?",
+    "options": [
+      "A) To increase the number of servers",
+      "B) To distribute incoming traffic",
+      "C) To reduce latency",
+      "D) To improve security"
+    ],
+    "answer": "B",
+    "explanation": "A load balancer is a device or software that distributes incoming traffic across multiple servers to improve responsiveness, reliability, and scalability.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the difference between a hash table and a linked list?",
+    "options": [
+      "A) Hash table is faster",
+      "B) Linked list is more memory-efficient",
+      "C) Hash table is more scalable",
+      "D) Linked list is more flexible"
+    ],
+    "answer": "A",
+    "explanation": "Hash tables are faster because they use a hash function to map keys to values, whereas linked lists are slower because they rely on sequential access.",
+    "domain": "Data Structures & Algorithms",
+    "difficulty": "Hard",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a data scientist in an organization?",
+    "options": [
+      "A) To design databases",
+      "B) To analyze and interpret complex data",
+      "C) To develop machine learning models",
       "D) To manage data storage"
     ],
-    "answer": "A",
-    "explanation": "A load balancer is a device or software that distributes incoming network traffic across multiple servers to ensure no single point of failure and improve scalability.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the purpose of the 'finally' block in a try-catch statement in Java?",
-    "options": [
-      "A) To handle exceptions",
-      "B) To execute code regardless of exception",
-      "C) To declare variables",
-      "D) To implement loops"
-    ],
     "answer": "B",
-    "explanation": "The 'finally' block in a try-catch statement in Java is used to execute code regardless of whether an exception is thrown or not.",
-    "domain": "Backend / Java / Node",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'pip install' command in Python?",
-    "options": [
-      "A) To uninstall packages",
-      "B) To update packages",
-      "C) To install packages",
-      "D) To remove packages"
-    ],
-    "answer": "C",
-    "explanation": "The 'pip install' command is used to install packages and their dependencies in Python.",
-    "domain": "Software Engineering",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of identifying and mitigating potential security threats in a software application?",
-    "options": [
-      "A) Penetration testing",
-      "B) Vulnerability assessment",
-      "C) Threat modeling",
-      "D) Risk analysis"
-    ],
-    "answer": "C",
-    "explanation": "Threat modeling is the process of identifying and mitigating potential security threats in a software application.",
-    "domain": "Cybersecurity",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the purpose of the 'SELECT' statement in SQL?",
-    "options": [
-      "A) To insert data into a table",
-      "B) To update data in a table",
-      "C) To retrieve data from a table",
-      "D) To delete data from a table"
-    ],
-    "answer": "C",
-    "explanation": "The 'SELECT' statement in SQL is used to retrieve data from a database table.",
-    "domain": "Database Systems",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of creating a new function or method from an existing one?",
-    "options": [
-      "A) Inheritance",
-      "B) Polymorphism",
-      "C) Encapsulation",
-      "D) Abstraction"
-    ],
-    "answer": "A",
-    "explanation": "Inheritance is the process of creating a new function or method from an existing one.",
-    "domain": "Software Engineering",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'npm install' command in Node.js?",
-    "options": [
-      "A) To uninstall packages",
-      "B) To update packages",
-      "C) To install packages",
-      "D) To remove packages"
-    ],
-    "answer": "C",
-    "explanation": "The 'npm install' command is used to install packages and their dependencies in Node.js.",
-    "domain": "Backend / Java / Node",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of analyzing and interpreting data to extract insights and meaning?",
-    "options": [
-      "A) Data visualization",
-      "B) Data mining",
-      "C) Data analysis",
-      "D) Data science"
-    ],
-    "answer": "D",
-    "explanation": "Data science is the process of analyzing and interpreting data to extract insights and meaning.",
+    "explanation": "A data scientist is responsible for analyzing and interpreting complex data to gain insights and make informed business decisions.",
     "domain": "Data Science",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'git commit' command in Git?",
-    "options": [
-      "A) To push changes to a remote repository",
-      "B) To pull changes from a remote repository",
-      "C) To commit changes locally",
-      "D) To reset changes locally"
-    ],
-    "answer": "C",
-    "explanation": "The 'git commit' command is used to commit changes locally in Git.",
-    "domain": "DevOps / Cloud",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the term for the process of securing data at rest and in transit?",
+    "question": "What is the difference between a GET and a POST request in HTTP?",
     "options": [
-      "A) Data encryption",
-      "B) Data compression",
-      "C) Data integrity",
-      "D) Data availability"
+      "A) GET is for reading data",
+      "B) POST is for writing data",
+      "C) GET is for updating data",
+      "D) POST is for deleting data"
     ],
     "answer": "A",
-    "explanation": "Data encryption is the process of securing data at rest and in transit.",
-    "domain": "Cybersecurity",
+    "explanation": "GET requests are used to retrieve data from a server, while POST requests are used to send data to a server for processing.",
+    "domain": "Web Development",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a reverse proxy server?",
+    "options": [
+      "A) To cache frequently accessed content",
+      "B) To hide the IP address of the server",
+      "C) To improve security",
+      "D) To increase scalability"
+    ],
+    "answer": "B",
+    "explanation": "A reverse proxy server sits between a client and a server, hiding the IP address of the server and providing an additional layer of security and scalability.",
+    "domain": "DevOps / Cloud",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary purpose of the 'SELECT DISTINCT' statement in SQL?",
+    "question": "What is the main purpose of a Linux distribution?",
     "options": [
-      "A) To retrieve unique values from a table",
-      "B) To retrieve duplicate values from a table",
-      "C) To retrieve all values from a table",
-      "D) To retrieve data from a specific table"
+      "A) To provide a specific set of software",
+      "B) To provide a specific set of hardware",
+      "C) To provide a specific set of configuration options",
+      "D) To provide a specific set of documentation"
     ],
     "answer": "A",
-    "explanation": "The 'SELECT DISTINCT' statement in SQL is used to retrieve unique values from a table.",
+    "explanation": "A Linux distribution is a collection of software packages and tools that provide a specific set of features and functionality.",
+    "domain": "Software Engineering",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a CI/CD pipeline?",
+    "options": [
+      "A) To automate testing",
+      "B) To automate deployment",
+      "C) To automate both testing and deployment",
+      "D) To automate neither testing nor deployment"
+    ],
+    "answer": "C",
+    "explanation": "A CI/CD pipeline automates both testing and deployment, allowing for faster and more reliable software releases.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the main difference between a relational database and a NoSQL database?",
+    "options": [
+      "A) Relational databases are more scalable",
+      "B) NoSQL databases are more flexible",
+      "C) Relational databases are more complex",
+      "D) NoSQL databases are more relational"
+    ],
+    "answer": "B",
+    "explanation": "NoSQL databases are more flexible and adaptable to different data models, whereas relational databases are more structured and rigid.",
     "domain": "Database Systems",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of creating a new application from an existing one?",
-    "options": [
-      "A) Refactoring",
-      "B) Inheritance",
-      "C) Abstraction",
-      "D) Encapsulation"
-    ],
-    "answer": "A",
-    "explanation": "Refactoring is the process of creating a new application from an existing one.",
-    "domain": "Software Engineering",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary purpose of the 'docker run' command in Docker?",
+    "question": "What is the purpose of a machine learning model?",
     "options": [
-      "A) To create a new Docker container",
-      "B) To start a running Docker container",
-      "C) To stop a running Docker container",
-      "D) To delete a Docker container"
-    ],
-    "answer": "B",
-    "explanation": "The 'docker run' command is used to start a running Docker container.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of identifying and addressing potential security vulnerabilities in software?",
-    "options": [
-      "A) Penetration testing",
-      "B) Vulnerability assessment",
-      "C) Threat modeling",
-      "D) Risk analysis"
-    ],
-    "answer": "B",
-    "explanation": "Vulnerability assessment is the process of identifying and addressing potential security vulnerabilities in software.",
-    "domain": "Cybersecurity",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'npm start' command in Node.js?",
-    "options": [
-      "A) To install packages",
-      "B) To update packages",
-      "C) To start a Node.js application",
-      "D) To stop a Node.js application"
-    ],
-    "answer": "C",
-    "explanation": "The 'npm start' command is used to start a Node.js application.",
-    "domain": "Backend / Java / Node",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of creating a new function or method that extends the behavior of an existing one?",
-    "options": [
-      "A) Inheritance",
-      "B) Polymorphism",
-      "C) Encapsulation",
-      "D) Abstraction"
-    ],
-    "answer": "B",
-    "explanation": "Polymorphism is the process of creating a new function or method that extends the behavior of an existing one.",
-    "domain": "Software Engineering",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'git push' command in Git?",
-    "options": [
-      "A) To pull changes from a remote repository",
-      "B) To push changes to a remote repository",
-      "C) To commit changes locally",
-      "D) To reset changes locally"
-    ],
-    "answer": "B",
-    "explanation": "The 'git push' command is used to push changes to a remote repository in Git.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of analyzing and optimizing the performance of a software application?",
-    "options": [
-      "A) Profiling",
-      "B) Debugging",
-      "C) Testing",
-      "D) Optimization"
-    ],
-    "answer": "A",
-    "explanation": "Profiling is the process of analyzing and optimizing the performance of a software application.",
-    "domain": "Software Engineering",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'SELECT COUNT(*)' statement in SQL?",
-    "options": [
-      "A) To retrieve unique values from a table",
-      "B) To retrieve duplicate values from a table",
-      "C) To retrieve the number of rows in a table",
-      "D) To retrieve data from a specific table"
-    ],
-    "answer": "C",
-    "explanation": "The 'SELECT COUNT(*)' statement in SQL is used to retrieve the number of rows in a table.",
-    "domain": "Database Systems",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of creating a new software application from scratch?",
-    "options": [
-      "A) Refactoring",
-      "B) Inheritance",
-      "C) Abstraction",
-      "D) Greenfield development"
+      "A) To make predictions",
+      "B) To classify data",
+      "C) To cluster data",
+      "D) To all of the above"
     ],
     "answer": "D",
-    "explanation": "Greenfield development is the process of creating a new software application from scratch.",
+    "explanation": "Machine learning models can be used for a variety of tasks, including making predictions, classifying data, and clustering data.",
+    "domain": "Machine Learning / AI",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the main purpose of a containerization platform?",
+    "options": [
+      "A) To virtualize hardware",
+      "B) To package software",
+      "C) To manage infrastructure",
+      "D) To automate deployment"
+    ],
+    "answer": "B",
+    "explanation": "Containerization platforms package software and its dependencies into a single container, allowing for easy deployment and management.",
+    "domain": "DevOps / Cloud",
+    "difficulty": "Medium",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a security token in a web application?",
+    "options": [
+      "A) To authenticate users",
+      "B) To authorize access",
+      "C) To encrypt data",
+      "D) To authenticate and authorize"
+    ],
+    "answer": "D",
+    "explanation": "A security token is used to authenticate and authorize users in a web application, providing a secure way to verify user identity and access permissions.",
+    "domain": "Cybersecurity",
+    "difficulty": "Medium",
+    "skill_type": "Security"
+  },
+  {
+    "question": "What is the main difference between a monorepo and a multi-repo?",
+    "options": [
+      "A) Monorepo is more scalable",
+      "B) Multi-repo is more flexible",
+      "C) Monorepo is more complex",
+      "D) Multi-repo is more monolithic"
+    ],
+    "answer": "B",
+    "explanation": "A monorepo is a single repository that contains all the code for a project, whereas a multi-repo is a collection of separate repositories, each containing a portion of the project code.",
     "domain": "Software Engineering",
     "difficulty": "Medium",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the primary purpose of the 'docker-compose up' command in Docker Compose?",
+    "question": "What is the purpose of a code review?",
     "options": [
-      "A) To create a new Docker container",
-      "B) To start a running Docker container",
-      "C) To stop a running Docker container",
-      "D) To delete a Docker container"
-    ],
-    "answer": "B",
-    "explanation": "The 'docker-compose up' command is used to start a running Docker container.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of identifying and mitigating potential security threats in a software application?",
-    "options": [
-      "A) Penetration testing",
-      "B) Vulnerability assessment",
-      "C) Threat modeling",
-      "D) Risk analysis"
-    ],
-    "answer": "C",
-    "explanation": "Threat modeling is the process of identifying and mitigating potential security threats in a software application.",
-    "domain": "Cybersecurity",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'npm uninstall' command in Node.js?",
-    "options": [
-      "A) To install packages",
-      "B) To update packages",
-      "C) To uninstall packages",
-      "D) To remove packages"
-    ],
-    "answer": "C",
-    "explanation": "The 'npm uninstall' command is used to uninstall packages in Node.js.",
-    "domain": "Backend / Java / Node",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of analyzing and interpreting data to extract insights and meaning?",
-    "options": [
-      "A) Data visualization",
-      "B) Data mining",
-      "C) Data analysis",
-      "D) Data science"
+      "A) To improve code quality",
+      "B) To reduce bugs",
+      "C) To increase code speed",
+      "D) To improve code maintainability"
     ],
     "answer": "D",
-    "explanation": "Data science is the process of analyzing and interpreting data to extract insights and meaning.",
+    "explanation": "Code reviews are an essential part of the development process, as they help improve code quality, maintainability, and overall software quality.",
+    "domain": "Software Engineering",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the main purpose of a caching layer in a web application?",
+    "options": [
+      "A) To improve scalability",
+      "B) To improve performance",
+      "C) To improve security",
+      "D) To improve reliability"
+    ],
+    "answer": "B",
+    "explanation": "A caching layer improves performance by storing frequently accessed data in memory, reducing the need for database queries and improving response times.",
+    "domain": "Web Development",
+    "difficulty": "Easy",
+    "skill_type": "Theory"
+  },
+  {
+    "question": "What is the purpose of a data visualization tool?",
+    "options": [
+      "A) To improve data quality",
+      "B) To improve data analysis",
+      "C) To improve data presentation",
+      "D) To improve data storage"
+    ],
+    "answer": "C",
+    "explanation": "Data visualization tools help improve data presentation by converting complex data into easy-to-understand visual representations, making it easier to analyze and understand.",
     "domain": "Data Science",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'git reset' command in Git?",
-    "options": [
-      "A) To commit changes locally",
-      "B) To push changes to a remote repository",
-      "C) To reset changes locally",
-      "D) To delete a Git repository"
-    ],
-    "answer": "C",
-    "explanation": "The 'git reset' command is used to reset changes locally in Git.",
-    "domain": "DevOps / Cloud",
     "difficulty": "Easy",
     "skill_type": "Theory"
   },
   {
-    "question": "What is the term for the process of creating a new function or method that extends the behavior of an existing one?",
+    "question": "What is the main difference between a service-oriented architecture and a microservices architecture?",
     "options": [
-      "A) Inheritance",
-      "B) Polymorphism",
-      "C) Encapsulation",
-      "D) Abstraction"
+      "A) Service-oriented architecture is more scalable",
+      "B) Microservices architecture is more modular",
+      "C) Service-oriented architecture is more complex",
+      "D) Microservices architecture is more monolithic"
     ],
     "answer": "B",
-    "explanation": "Polymorphism is the process of creating a new function or method that extends the behavior of an existing one.",
+    "explanation": "Microservices architecture is more modular, as it breaks down an application into a collection of small, independent services that communicate with each other.",
     "domain": "Software Engineering",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'npm ls' command in Node.js?",
-    "options": [
-      "A) To install packages",
-      "B) To update packages",
-      "C) To list packages",
-      "D) To remove packages"
-    ],
-    "answer": "C",
-    "explanation": "The 'npm ls' command is used to list packages in Node.js.",
-    "domain": "Backend / Java / Node",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of identifying and addressing potential security vulnerabilities in software?",
-    "options": [
-      "A) Penetration testing",
-      "B) Vulnerability assessment",
-      "C) Threat modeling",
-      "D) Risk analysis"
-    ],
-    "answer": "B",
-    "explanation": "Vulnerability assessment is the process of identifying and addressing potential security vulnerabilities in software.",
-    "domain": "Cybersecurity",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'docker stop' command in Docker?",
-    "options": [
-      "A) To create a new Docker container",
-      "B) To start a running Docker container",
-      "C) To stop a running Docker container",
-      "D) To delete a Docker container"
-    ],
-    "answer": "C",
-    "explanation": "The 'docker stop' command is used to stop a running Docker container.",
-    "domain": "DevOps / Cloud",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of creating a new software application from scratch?",
-    "options": [
-      "A) Refactoring",
-      "B) Inheritance",
-      "C) Abstraction",
-      "D) Greenfield development"
-    ],
-    "answer": "D",
-    "explanation": "Greenfield development is the process of creating a new software application from scratch.",
-    "domain": "Software Engineering",
-    "difficulty": "Medium",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the primary purpose of the 'npm version' command in Node.js?",
-    "options": [
-      "A) To install packages",
-      "B) To update packages",
-      "C) To list packages",
-      "D) To manage package versions"
-    ],
-    "answer": "D",
-    "explanation": "The 'npm version' command is used to manage package versions in Node.js.",
-    "domain": "Backend / Java / Node",
-    "difficulty": "Easy",
-    "skill_type": "Theory"
-  },
-  {
-    "question": "What is the term for the process of analyzing and interpreting data to extract insights and meaning?",
-    "options": [
-      "A) Data visualization",
-      "B) Data mining",
-      "C) Data analysis",
-      "D) Data science"
-    ],
-    "answer": "D",
-    "explanation": "Data science is the process of analyzing and interpreting data to extract insights and meaning.",
-    "domain": "Data Science",
     "difficulty": "Medium",
     "skill_type": "Theory"
   }

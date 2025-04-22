@@ -12,7 +12,7 @@ export const fetchQuiz = async () => {
   const timeoutId = setTimeout(() => {
     didTimeout = true;
     controller.abort();
-  }, 60000); // 60s timeout
+  }, 120000); // 60s timeout
 
   try {
     const response = await fetch(url, {
