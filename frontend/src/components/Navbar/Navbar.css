@@ -49,13 +49,41 @@
   color: #333;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: all 0.3s;
   padding: 0.5rem 0;
   position: relative;
 }
 
+/* Tab Highlight Effect */
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff4da6, #b366ff);
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
+
 .nav-links button:hover {
   color: #ff4da6;
+}
+
+/* Active Tab Style */
+.nav-links button.active {
+  color: #6a11cb;
+  font-weight: 600;
+}
+
+.nav-links button.active::after {
+  width: 100%;
+  background: linear-gradient(90deg, #ff4da6, #b366ff);
 }
 
 /* Unified Login Button */
@@ -93,58 +121,6 @@
   cursor: pointer;
   z-index: 1001;
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .navbar-container {
-    padding: 1rem;
-  }
-
-  .mobile-menu-button {
-    display: block;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    background: white;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 6rem 2rem;
-    gap: 1.5rem;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-links.active {
-    transform: translateX(0);
-  }
-
-  .nav-links button {
-    width: 100%;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    text-align: left;
-  }
-
-  .unified-login-button {
-    display: none;
-  }
-
-  .nav-links .unified-login-button {
-    display: flex;
-    margin-top: 1rem;
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* Existing styles remain the same */
 
 /* Desktop Login Button */
 .desktop-login-button {
@@ -193,8 +169,16 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
   .desktop-login-button {
     display: none;
   }
@@ -229,5 +213,11 @@
     padding: 0.75rem 0;
     text-align: left;
     border-bottom: 1px solid #f0f0f0;
+  }
+
+  /* Mobile Tab Highlight Adjustment */
+  .nav-links button::after {
+    bottom: -1px;
+    height: 2px;
   }
 }
