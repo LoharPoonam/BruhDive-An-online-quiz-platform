@@ -15,7 +15,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://bruhdive.netlify.app",
+  methods: ["GET", "POST"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Simple in-memory cache
